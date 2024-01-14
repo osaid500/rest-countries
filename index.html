@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>REST Countries</title>
+    <link rel="stylesheet" href="output.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="header-title">Where in the world?</h1>
+      <div class="theme-selector">
+        <img src="icons/sun.svg" alt="theme icon" />
+        <p>Dark mode</p>
+      </div>
+    </header>
+    <main class="container">
+      <section class="search-and-filter">
+        <div class="search-section">
+          <img src="icons/search.svg" alt="search icon" />
+          <input type="text" placeholder="Search for a country..." />
+        </div>
+        <div class="dropdown-menu">
+          <!-- <select name="region" id="region-filter">
+            <option value="" selected>Choose a region</option>
+            <option value="africa">Africa</option>
+            <option value="america">America</option>
+            <option value="asia">Asia</option>
+            <option value="europe">Europe</option>
+            <option value="oceania">Oceania</option>
+          </select> -->
+          <div class="select">
+            <span>Filter by region</span>
+            <img class="rotate" src="icons/arrow.svg" alt="dropdown arrow" />
+          </div>
+          <div class="options-list">
+            <div class="option">Africa</div>
+            <div class="option">America</div>
+            <div class="option">Asia</div>
+            <div class="option">Europe</div>
+            <div class="option">Oceania</div>
+          </div>
+        </div>
+      </section>
+      <section class="country-list">
+        <article class="country-card">
+          <img src="https://flagcdn.com/w320/ax.png" alt="country flag" />
+          <div class="country-card-info">
+            <h2 class="country-card-title">Germany</h2>
+            <table>
+              <tr>
+                <td><strong>Population:</strong></td>
+                <td>81,770,920</td>
+              </tr>
+              <tr>
+                <td><strong>Region:</strong></td>
+                <td>Europe</td>
+              </tr>
+              <tr>
+                <td><strong>Capital:</strong></td>
+                <td>Berlin</td>
+              </tr>
+            </table>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
