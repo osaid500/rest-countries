@@ -3,6 +3,7 @@
 $font-stack: Nunito Sans, sans-serif;
 $dark-back: hsl(207, 26%, 17%);
 $dark-element: hsl(209, 23%, 22%);
+$shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
 
 body {
   background-color: $dark-back;
@@ -10,106 +11,148 @@ body {
   padding: 0;
   font: 100% $font-stack;
   color: white;
-}
+  font-size: 14px !important;
 
-header {
-  background-color: $dark-element;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  min-height: 5rem;
-  padding: 1rem;
-  box-sizing: border-box;
-
-  .header-title {
-    font-size: 1rem;
-  }
-
-  .theme-selector {
+  header {
+    background-color: $dark-element;
     display: flex;
-    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 5rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 7px 0px;
 
-    img {
-      width: 1rem;
+    .header-title {
+      font-size: 1rem;
     }
 
-    p {
-      font-weight: 600;
-      font-size: 0.9rem;
-    }
-  }
-
-  margin-bottom: 1rem;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
-
-  .search-and-filter {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-
-    .search-section {
-      max-width: 100%;
-      position: relative;
-      box-sizing: border-box;
-      // padding: 1rem;
-      // border-radius: 0.3rem;
+    .theme-selector {
       display: flex;
-      // background-color: $dark-element;
+      gap: 10px;
 
       img {
         width: 1rem;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        margin: auto 0;
-        padding-left: 2rem;
       }
 
-      input {
-        width: 100%;
-        padding: 1rem 4.5rem;
-        border-radius: 0.3rem;
-        background-color: $dark-element;
-        border: none;
-        outline: none;
-        color: white;
+      p {
+        font-weight: 600;
+        // font-size: 0.9rem;
       }
     }
 
-    .dropdown-menu {
-      max-width: 13rem;
-      .select {
-        background-color: $dark-element;
-        border-radius: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+
+    .search-and-filter {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+
+      .search-section {
+        max-width: 100%;
+        position: relative;
+        box-sizing: border-box;
         display: flex;
-        justify-content: space-between;
-        padding: 1rem 1.5rem;
 
         img {
           width: 1rem;
-          &.rotate {
-            transform: rotate(180deg);
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+          padding-left: 2rem;
+        }
+
+        input {
+          width: 100%;
+          padding: 1rem 4.5rem;
+          border-radius: 0.3rem;
+          background-color: $dark-element;
+          border: none;
+          outline: none;
+          color: white;
+          box-shadow: $shadow;
+
+          &::placeholder {
+            color: white;
+          }
+        }
+      }
+
+      .dropdown-menu {
+        max-width: 13rem;
+        margin-bottom: 1.5rem;
+
+        .select {
+          background-color: $dark-element;
+          border-radius: 0.3rem;
+          display: flex;
+          justify-content: space-between;
+          padding: 1rem 1.5rem;
+          box-shadow: $shadow;
+
+          img {
+            width: 1rem;
+            &.rotate {
+              transform: rotate(180deg);
+            }
           }
         }
 
-        margin-bottom: 0.3rem;
+        .options-list {
+          background-color: $dark-element;
+          border-radius: 0.3rem;
+          overflow: hidden;
+          height: 0;
+
+          &.active {
+            height: auto;
+          }
+        }
       }
+    }
 
-      .options-list {
-        background-color: $dark-element;
+    .country-list {
+      padding: 0 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5rem;
+
+      .country-card {
+        display: flex;
+        flex-direction: column;
+        max-width: 15rem;
         border-radius: 0.3rem;
-        // padding: 1rem 1.5rem;
-        height: 0;
+        overflow: hidden;
+        box-shadow: $shadow;
 
-        &.active {
-          height: auto;
+        img {
+          max-width: 100%;
+        }
+
+        .country-card-info {
+          background-color: $dark-element;
+          padding: 0.5rem 0 2rem 1.5rem;
+
+          .country-card-title {
+            font-size: 1.1rem;
+          }
+
+          p {
+            margin: 0;
+            font-weight: 600;
+
+            span {
+              font-weight: 300;
+            }
+          }
         }
       }
     }

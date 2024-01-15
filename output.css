@@ -5,9 +5,9 @@ body {
   padding: 0;
   font: 100% Nunito Sans, sans-serif;
   color: white;
+  font-size: 14px !important;
 }
-
-header {
+body header {
   background-color: hsl(209, 23%, 22%);
   display: flex;
   justify-content: space-between;
@@ -15,42 +15,40 @@ header {
   min-height: 5rem;
   padding: 1rem;
   box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 7px 0px;
   margin-bottom: 1rem;
 }
-header .header-title {
+body header .header-title {
   font-size: 1rem;
 }
-header .theme-selector {
+body header .theme-selector {
   display: flex;
   gap: 10px;
 }
-header .theme-selector img {
+body header .theme-selector img {
   width: 1rem;
 }
-header .theme-selector p {
+body header .theme-selector p {
   font-weight: 600;
-  font-size: 0.9rem;
 }
-
-.container {
+body .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 1rem;
 }
-.container .search-and-filter {
+body .container .search-and-filter {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
 }
-.container .search-and-filter .search-section {
+body .container .search-and-filter .search-section {
   max-width: 100%;
   position: relative;
   box-sizing: border-box;
   display: flex;
 }
-.container .search-and-filter .search-section img {
+body .container .search-and-filter .search-section img {
   width: 1rem;
   position: absolute;
   top: 0;
@@ -58,7 +56,7 @@ header .theme-selector p {
   margin: auto 0;
   padding-left: 2rem;
 }
-.container .search-and-filter .search-section input {
+body .container .search-and-filter .search-section input {
   width: 100%;
   padding: 1rem 4.5rem;
   border-radius: 0.3rem;
@@ -66,31 +64,68 @@ header .theme-selector p {
   border: none;
   outline: none;
   color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
 }
-.container .search-and-filter .dropdown-menu {
+body .container .search-and-filter .search-section input::placeholder {
+  color: white;
+}
+body .container .search-and-filter .dropdown-menu {
   max-width: 13rem;
+  margin-bottom: 1.5rem;
 }
-.container .search-and-filter .dropdown-menu .select {
+body .container .search-and-filter .dropdown-menu .select {
   background-color: hsl(209, 23%, 22%);
   border-radius: 0.3rem;
   display: flex;
   justify-content: space-between;
   padding: 1rem 1.5rem;
-  margin-bottom: 0.3rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
 }
-.container .search-and-filter .dropdown-menu .select img {
+body .container .search-and-filter .dropdown-menu .select img {
   width: 1rem;
 }
-.container .search-and-filter .dropdown-menu .select img.rotate {
+body .container .search-and-filter .dropdown-menu .select img.rotate {
   transform: rotate(180deg);
 }
-.container .search-and-filter .dropdown-menu .options-list {
+body .container .search-and-filter .dropdown-menu .options-list {
   background-color: hsl(209, 23%, 22%);
   border-radius: 0.3rem;
+  overflow: hidden;
   height: 0;
 }
-.container .search-and-filter .dropdown-menu .options-list.active {
+body .container .search-and-filter .dropdown-menu .options-list.active {
   height: auto;
+}
+body .container .country-list {
+  padding: 0 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+body .container .country-list .country-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 15rem;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
+}
+body .container .country-list .country-card img {
+  max-width: 100%;
+}
+body .container .country-list .country-card .country-card-info {
+  background-color: hsl(209, 23%, 22%);
+  padding: 0.5rem 0 2rem 1.5rem;
+}
+body .container .country-list .country-card .country-card-info .country-card-title {
+  font-size: 1.1rem;
+}
+body .container .country-list .country-card .country-card-info p {
+  margin: 0;
+  font-weight: 600;
+}
+body .container .country-list .country-card .country-card-info p span {
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=output.css.map */
