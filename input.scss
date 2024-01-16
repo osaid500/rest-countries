@@ -39,6 +39,11 @@ body {
 
       img {
         width: 1rem;
+        transition: $duration;
+
+        &:hover {
+          transform: scale(1.4);
+        }
       }
 
       p {
