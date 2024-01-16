@@ -17,6 +17,7 @@ body {
 
   img {
     cursor: pointer;
+    transition: $duration;
   }
 
   header {
@@ -39,7 +40,6 @@ body {
 
       img {
         width: 1rem;
-        transition: $duration;
 
         &:hover {
           transform: scale(1.4);
@@ -73,12 +73,17 @@ body {
         display: flex;
 
         img {
-          width: 1rem;
+          max-width: 1rem;
           position: absolute;
           top: 0;
           bottom: 0;
           margin: auto 0;
-          padding-left: 2rem;
+          // padding-left: 2rem;
+          margin-left: 2rem;
+
+          &:hover {
+            transform: scale(1.4);
+          }
         }
 
         input {
@@ -109,6 +114,11 @@ body {
           padding: 1rem 1.5rem;
           box-shadow: $shadow;
           cursor: pointer;
+          transition: $duration;
+
+          &:hover {
+            background-color: $hovered-element;
+          }
 
           img {
             width: 1rem;
@@ -154,13 +164,28 @@ body {
         overflow: hidden;
         box-shadow: $shadow;
 
-        img {
-          max-width: 100%;
+        figure {
+          width: 100%;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+
+          img {
+            max-width: 100%;
+            // transform: scale(1.4);
+
+            &:hover {
+              transform: scale(1.4);
+            }
+          }
         }
 
         .country-card-info {
           background-color: $dark-element;
           padding: 0.5rem 0 2rem 1.5rem;
+          overflow: hidden;
 
           .country-card-title {
             font-size: 1.1rem;

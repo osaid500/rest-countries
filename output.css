@@ -9,6 +9,7 @@ body {
 }
 body img {
   cursor: pointer;
+  transition: 0.2s;
 }
 body header {
   background-color: hsl(209, 23%, 22%);
@@ -30,7 +31,6 @@ body header .theme-selector {
 }
 body header .theme-selector img {
   width: 1rem;
-  transition: 0.2s;
 }
 body header .theme-selector img:hover {
   transform: scale(1.4);
@@ -56,12 +56,15 @@ body .container .search-and-filter .search-section {
   display: flex;
 }
 body .container .search-and-filter .search-section img {
-  width: 1rem;
+  max-width: 1rem;
   position: absolute;
   top: 0;
   bottom: 0;
   margin: auto 0;
-  padding-left: 2rem;
+  margin-left: 2rem;
+}
+body .container .search-and-filter .search-section img:hover {
+  transform: scale(1.4);
 }
 body .container .search-and-filter .search-section input {
   width: 100%;
@@ -88,6 +91,10 @@ body .container .search-and-filter .dropdown-menu .select {
   padding: 1rem 1.5rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
   cursor: pointer;
+  transition: 0.2s;
+}
+body .container .search-and-filter .dropdown-menu .select:hover {
+  background-color: hsl(209, 33%, 32%);
 }
 body .container .search-and-filter .dropdown-menu .select img {
   width: 1rem;
@@ -125,12 +132,24 @@ body .container .country-list .country-card {
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
 }
-body .container .country-list .country-card img {
+body .container .country-list .country-card figure {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+body .container .country-list .country-card figure img {
   max-width: 100%;
+}
+body .container .country-list .country-card figure img:hover {
+  transform: scale(1.4);
 }
 body .container .country-list .country-card .country-card-info {
   background-color: hsl(209, 23%, 22%);
   padding: 0.5rem 0 2rem 1.5rem;
+  overflow: hidden;
 }
 body .container .country-list .country-card .country-card-info .country-card-title {
   font-size: 1.1rem;
