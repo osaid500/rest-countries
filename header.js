@@ -1,8 +1,6 @@
-const header = document.createElement("header");
 const isRoot = window.location.pathname.endsWith("index.html");
-
 const url = isRoot ? "./icons/sun.svg" : "../icons/sun.svg";
-header.innerHTML = `<h1 class="header-title">Where in the world?</h1>
+const inner = `<h1 class="header-title">Where in the world?</h1>
       <div class="theme-selector">
         <img
           src=${url}
@@ -14,5 +12,5 @@ header.innerHTML = `<h1 class="header-title">Where in the world?</h1>
       </div>`;
 
 document.addEventListener("DOMContentLoaded", () => {
-  document.body.appendChild(header);
+  document.body.querySelector("header").innerHTML = inner;
 });
