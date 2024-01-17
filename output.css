@@ -248,11 +248,11 @@ body .container .country-list .country-card .country-card-info p span {
 .details-page main .details .details-container .border .border-countries {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 .details-page main .details .details-container .border .border-countries a {
-  min-width: 5rem;
-  max-height: 30%;
+  width: 5rem;
+  max-height: 1rem;
   padding: 0.6rem 0.5rem;
   transition: 0.2s;
 }
