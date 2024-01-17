@@ -4,6 +4,7 @@ $font-stack: Nunito Sans, sans-serif;
 $dark-back: hsl(207, 26%, 17%);
 $dark-element: hsl(209, 23%, 22%);
 $hovered-element: hsl(209, 33%, 32%);
+$hovered-text: hsl(210, 74%, 70%);
 $shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
 $duration: 0.2s;
 
@@ -115,6 +116,7 @@ body {
       .dropdown-menu {
         max-width: 13rem;
         margin-bottom: 1.5rem;
+        position: relative;
 
         .select {
           background-color: $dark-element;
@@ -125,8 +127,11 @@ body {
           box-shadow: $shadow;
           cursor: pointer;
           transition: $duration;
+          color: white;
+          border: none;
 
-          &:hover {
+          &:hover,
+          &:focus {
             background-color: $hovered-element;
           }
 
@@ -150,6 +155,22 @@ body {
           flex-direction: column;
           gap: 0.5rem;
           transition: height 1s;
+
+          position: absolute;
+          width: 100%;
+          z-index: 1;
+
+          a {
+            text-decoration: none;
+            color: white;
+            transition: $duration;
+            // width: fit-content;
+
+            &:hover,
+            &:focus {
+              color: $hovered-text;
+            }
+          }
 
           &.active {
             padding: 1rem 1.5rem;

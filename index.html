@@ -15,17 +15,29 @@
           <img src="icons/search.svg" alt="search icon" />
           <input type="text" placeholder="Search for a country..." />
         </div>
-        <div class="dropdown-menu">
-          <div class="select">
+        <div class="dropdown-menu" role="listbox">
+          <button
+            class="select"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
             <span>Filter by region</span>
             <img class="rotate" src="icons/arrow.svg" alt="dropdown arrow" />
-          </div>
-          <div class="options-list">
-            <div class="option">Africa</div>
-            <div class="option">America</div>
-            <div class="option">Asia</div>
-            <div class="option">Europe</div>
-            <div class="option">Oceania</div>
+          </button>
+          <div
+            class="options-list active"
+            id="optionsList"
+            role="list"
+            aria-labelledby="dropdownSelect"
+          >
+            <a class="option" href="#">Africa</a>
+            <a class="option" href="#">America</a>
+            <a class="option" href="#">Asia</a>
+            <a class="option" href="#">Europe</a>
+            <a class="option" href="#">Oceania</a>
           </div>
         </div>
       </section>

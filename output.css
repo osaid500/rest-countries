@@ -90,6 +90,7 @@ body .container .search-and-filter .search-section input::placeholder {
 body .container .search-and-filter .dropdown-menu {
   max-width: 13rem;
   margin-bottom: 1.5rem;
+  position: relative;
 }
 body .container .search-and-filter .dropdown-menu .select {
   background-color: hsl(209, 23%, 22%);
@@ -100,8 +101,10 @@ body .container .search-and-filter .dropdown-menu .select {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
   cursor: pointer;
   transition: 0.2s;
+  color: white;
+  border: none;
 }
-body .container .search-and-filter .dropdown-menu .select:hover {
+body .container .search-and-filter .dropdown-menu .select:hover, body .container .search-and-filter .dropdown-menu .select:focus {
   background-color: hsl(209, 33%, 32%);
 }
 body .container .search-and-filter .dropdown-menu .select img {
@@ -121,6 +124,17 @@ body .container .search-and-filter .dropdown-menu .options-list {
   flex-direction: column;
   gap: 0.5rem;
   transition: height 1s;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+body .container .search-and-filter .dropdown-menu .options-list a {
+  text-decoration: none;
+  color: white;
+  transition: 0.2s;
+}
+body .container .search-and-filter .dropdown-menu .options-list a:hover, body .container .search-and-filter .dropdown-menu .options-list a:focus {
+  color: hsl(210, 74%, 70%);
 }
 body .container .search-and-filter .dropdown-menu .options-list.active {
   padding: 1rem 1.5rem;
