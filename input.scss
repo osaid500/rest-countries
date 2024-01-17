@@ -81,7 +81,7 @@ body {
           bottom: 0;
           margin: auto 0;
           // padding-left: 2rem;
-          margin-left: clamp(1rem, 5vh, 2rem);
+          margin-left: clamp(1rem, 5vw, 2rem);
 
           &:hover {
             transform: scale(1.4);
@@ -90,7 +90,7 @@ body {
 
         input {
           width: 100%;
-          padding: 1rem clamp(2.5rem, 10vh, 4.5rem);
+          padding: 1rem clamp(2.8rem, 20vw, 4.5rem);
           border-radius: 0.3rem;
           background-color: $dark-element;
           border: none;
@@ -103,8 +103,8 @@ body {
           &:hover,
           &:focus {
             background-color: $hovered-element;
-            padding-right: clamp(5rem, 10vh, 7rem);
-            padding-left: clamp(4rem, 10vh, 6rem);
+            padding-right: clamp(5rem, 10vw, 7rem);
+            padding-left: clamp(3rem, 20vw, 6rem);
           }
 
           &::placeholder {
@@ -137,6 +137,7 @@ body {
 
           img {
             width: 1rem;
+            margin-left: clamp(0.1rem, 10vw, 3rem);
 
             &.rotate {
               transform: rotate(180deg);
@@ -195,7 +196,7 @@ body {
         overflow: hidden;
         box-shadow: $shadow;
 
-        figure {
+        .image-container {
           width: 100%;
           margin: 0;
           display: flex;
@@ -205,11 +206,11 @@ body {
 
           img {
             max-width: 100%;
-            // transform: scale(1.4);
+          }
 
-            &:hover {
-              transform: scale(1.4);
-            }
+          &:hover img,
+          &:focus img {
+            transform: scale(1.4);
           }
         }
 
@@ -218,16 +219,35 @@ body {
           padding: 0.5rem 0 2rem 1.5rem;
           overflow: hidden;
 
-          .country-card-title {
-            font-size: 1.1rem;
+          a {
+            text-decoration: none;
+            color: white;
+
+            &:hover .country-card-title,
+            &:focus .country-card-title {
+              color: $hovered-text;
+            }
+
+            .country-card-title {
+              font-size: 1.1rem;
+              width: fit-content;
+              transition: $duration;
+            }
           }
 
-          p {
-            margin: 0;
-            font-weight: 600;
+          ul {
+            list-style: none;
+            padding: 0;
 
-            span {
-              font-weight: 300;
+            li {
+              strong {
+                margin: 0;
+                font-weight: 600;
+              }
+
+              span {
+                font-weight: 300;
+              }
             }
           }
         }

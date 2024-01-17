@@ -62,14 +62,14 @@ body .container .search-and-filter .search-section img {
   top: 0;
   bottom: 0;
   margin: auto 0;
-  margin-left: clamp(1rem, 5vh, 2rem);
+  margin-left: clamp(1rem, 5vw, 2rem);
 }
 body .container .search-and-filter .search-section img:hover {
   transform: scale(1.4);
 }
 body .container .search-and-filter .search-section input {
   width: 100%;
-  padding: 1rem clamp(2.5rem, 10vh, 4.5rem);
+  padding: 1rem clamp(2.8rem, 20vw, 4.5rem);
   border-radius: 0.3rem;
   background-color: hsl(209, 23%, 22%);
   border: none;
@@ -81,8 +81,8 @@ body .container .search-and-filter .search-section input {
 }
 body .container .search-and-filter .search-section input:hover, body .container .search-and-filter .search-section input:focus {
   background-color: hsl(209, 33%, 32%);
-  padding-right: clamp(5rem, 10vh, 7rem);
-  padding-left: clamp(4rem, 10vh, 6rem);
+  padding-right: clamp(5rem, 10vw, 7rem);
+  padding-left: clamp(3rem, 20vw, 6rem);
 }
 body .container .search-and-filter .search-section input::placeholder {
   color: white;
@@ -109,6 +109,7 @@ body .container .search-and-filter .dropdown-menu .select:hover, body .container
 }
 body .container .search-and-filter .dropdown-menu .select img {
   width: 1rem;
+  margin-left: clamp(0.1rem, 10vw, 3rem);
 }
 body .container .search-and-filter .dropdown-menu .select img.rotate {
   transform: rotate(180deg);
@@ -154,7 +155,7 @@ body .container .country-list .country-card {
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
 }
-body .container .country-list .country-card figure {
+body .container .country-list .country-card .image-container {
   width: 100%;
   margin: 0;
   display: flex;
@@ -162,10 +163,10 @@ body .container .country-list .country-card figure {
   align-items: center;
   overflow: hidden;
 }
-body .container .country-list .country-card figure img {
+body .container .country-list .country-card .image-container img {
   max-width: 100%;
 }
-body .container .country-list .country-card figure img:hover {
+body .container .country-list .country-card .image-container:hover img, body .container .country-list .country-card .image-container:focus img {
   transform: scale(1.4);
 }
 body .container .country-list .country-card .country-card-info {
@@ -173,14 +174,27 @@ body .container .country-list .country-card .country-card-info {
   padding: 0.5rem 0 2rem 1.5rem;
   overflow: hidden;
 }
-body .container .country-list .country-card .country-card-info .country-card-title {
-  font-size: 1.1rem;
+body .container .country-list .country-card .country-card-info a {
+  text-decoration: none;
+  color: white;
 }
-body .container .country-list .country-card .country-card-info p {
+body .container .country-list .country-card .country-card-info a:hover .country-card-title, body .container .country-list .country-card .country-card-info a:focus .country-card-title {
+  color: hsl(210, 74%, 70%);
+}
+body .container .country-list .country-card .country-card-info a .country-card-title {
+  font-size: 1.1rem;
+  width: fit-content;
+  transition: 0.2s;
+}
+body .container .country-list .country-card .country-card-info ul {
+  list-style: none;
+  padding: 0;
+}
+body .container .country-list .country-card .country-card-info ul li strong {
   margin: 0;
   font-weight: 600;
 }
-body .container .country-list .country-card .country-card-info p span {
+body .container .country-list .country-card .country-card-info ul li span {
   font-weight: 300;
 }
 
