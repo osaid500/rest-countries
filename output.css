@@ -41,7 +41,7 @@ body header .theme-selector p {
 body .container {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: clamp(0.1rem, 3vw, 1rem);
 }
 body .container .search-and-filter {
   display: flex;
@@ -69,7 +69,7 @@ body .container .search-and-filter .search-section img:hover {
 }
 body .container .search-and-filter .search-section input {
   width: 100%;
-  padding: 1rem clamp(2.8rem, 20vw, 4.5rem);
+  padding: 1rem clamp(2.2rem, 20vw, 4.5rem);
   border-radius: 0.3rem;
   background-color: hsl(209, 23%, 22%);
   border: none;
@@ -81,8 +81,8 @@ body .container .search-and-filter .search-section input {
 }
 body .container .search-and-filter .search-section input:hover, body .container .search-and-filter .search-section input:focus {
   background-color: hsl(209, 33%, 32%);
-  padding-right: clamp(5rem, 10vw, 7rem);
-  padding-left: clamp(3rem, 20vw, 6rem);
+  padding-right: clamp(2.2rem, 20vw, 7rem);
+  padding-left: clamp(2.2rem, 20vw, 6rem);
 }
 body .container .search-and-filter .search-section input::placeholder {
   color: white;
@@ -109,7 +109,7 @@ body .container .search-and-filter .dropdown-menu .select:hover, body .container
 }
 body .container .search-and-filter .dropdown-menu .select img {
   width: 1rem;
-  margin-left: clamp(0.1rem, 10vw, 3rem);
+  margin-left: clamp(0.1rem, 3vw, 3rem);
 }
 body .container .search-and-filter .dropdown-menu .select img.rotate {
   transform: rotate(180deg);
@@ -142,7 +142,7 @@ body .container .search-and-filter .dropdown-menu .options-list.active {
   height: 10rem;
 }
 body .container .country-list {
-  padding: 0 3rem;
+  padding: 0 clamp(0.1rem, 6vw, 3rem);
   display: flex;
   flex-wrap: wrap;
   gap: 5rem;
@@ -171,7 +171,7 @@ body .container .country-list .country-card .image-container:hover img, body .co
 }
 body .container .country-list .country-card .country-card-info {
   background-color: hsl(209, 23%, 22%);
-  padding: 0.5rem 0 2rem 1.5rem;
+  padding: 0.5rem 0 clamp(0.1rem, 10vw, 2rem) clamp(0.1rem, 10vw, 1.5rem);
   overflow: hidden;
 }
 body .container .country-list .country-card .country-card-info a {

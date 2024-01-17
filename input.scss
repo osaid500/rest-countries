@@ -59,7 +59,7 @@ body {
   .container {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: clamp(0.1rem, 3vw, 1rem);
 
     .search-and-filter {
       display: flex;
@@ -90,7 +90,7 @@ body {
 
         input {
           width: 100%;
-          padding: 1rem clamp(2.8rem, 20vw, 4.5rem);
+          padding: 1rem clamp(2.2rem, 20vw, 4.5rem);
           border-radius: 0.3rem;
           background-color: $dark-element;
           border: none;
@@ -103,8 +103,8 @@ body {
           &:hover,
           &:focus {
             background-color: $hovered-element;
-            padding-right: clamp(5rem, 10vw, 7rem);
-            padding-left: clamp(3rem, 20vw, 6rem);
+            padding-right: clamp(2.2rem, 20vw, 7rem);
+            padding-left: clamp(2.2rem, 20vw, 6rem);
           }
 
           &::placeholder {
@@ -137,7 +137,7 @@ body {
 
           img {
             width: 1rem;
-            margin-left: clamp(0.1rem, 10vw, 3rem);
+            margin-left: clamp(0.1rem, 3vw, 3rem);
 
             &.rotate {
               transform: rotate(180deg);
@@ -182,7 +182,7 @@ body {
     }
 
     .country-list {
-      padding: 0 3rem;
+      padding: 0 clamp(0.1rem, 6vw, 3rem);
       // padding: 0 10%;
       display: flex;
       flex-wrap: wrap;
@@ -216,7 +216,8 @@ body {
 
         .country-card-info {
           background-color: $dark-element;
-          padding: 0.5rem 0 2rem 1.5rem;
+          padding: 0.5rem 0 clamp(0.1rem, 10vw, 2rem)
+            clamp(0.1rem, 10vw, 1.5rem);
           overflow: hidden;
 
           a {
