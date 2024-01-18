@@ -10,18 +10,6 @@ $hovered-text: hsl(210, 74%, 70%);
 $shadow: rgba(0, 0, 0, 0.1) 0px 3px 8px;
 $duration: 0.2s;
 
-// white
-// $background: hsl(0, 0%, 98%);
-// $element: hsl(0, 0%, 100%);
-// $text: hsl(200, 15%, 8%);
-// $input: hsl(0, 0%, 52%);
-// $hovered-element: transparent;
-
-// @mixin content($background, $text) {
-//   background-color: $background;
-//   color: $text;
-// }
-
 @mixin bodyContent($background, $element, $text, $input, $hovered-element) {
   transition: $duration;
   background-color: $background;
@@ -64,7 +52,6 @@ $duration: 0.2s;
 
       p {
         font-weight: 600;
-        // font-size: 0.9rem;
       }
     }
 
@@ -95,7 +82,6 @@ $duration: 0.2s;
           top: 0;
           bottom: 0;
           margin: auto 0;
-          // padding-left: 2rem;
           margin-left: clamp(1rem, 5vw, 2rem);
           fill: $input;
           cursor: pointer;
@@ -173,14 +159,16 @@ $duration: 0.2s;
           box-sizing: border-box;
           display: flex;
           flex-direction: column;
-          gap: 0.5rem;
-          transition: height 1s;
+          justify-content: center;
+          gap: 0.2rem;
+          transition: height $duration;
 
           position: absolute;
           width: 100%;
           z-index: 1;
 
           a {
+            padding: 0.2rem 1rem 0rem 1.5rem;
             text-decoration: none;
             color: $text;
             transition: $duration;
@@ -193,7 +181,6 @@ $duration: 0.2s;
           }
 
           &.active {
-            padding: 1rem 1.5rem;
             height: 10rem;
           }
         }
@@ -293,6 +280,7 @@ body.light-theme {
 }
 
 body {
+  overflow-x: hidden;
   @include bodyContent(
     hsl(207, 26%, 17%),
     hsl(209, 23%, 22%),

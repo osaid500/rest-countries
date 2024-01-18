@@ -128,13 +128,15 @@ body.light-theme .container .search-and-filter .dropdown-menu .options-list {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  transition: height 1s;
+  justify-content: center;
+  gap: 0.2rem;
+  transition: height 0.2s;
   position: absolute;
   width: 100%;
   z-index: 1;
 }
 body.light-theme .container .search-and-filter .dropdown-menu .options-list a {
+  padding: 0.2rem 1rem 0rem 1.5rem;
   text-decoration: none;
   color: hsl(200, 15%, 8%);
   transition: 0.2s;
@@ -143,7 +145,6 @@ body.light-theme .container .search-and-filter .dropdown-menu .options-list a:ho
   color: hsl(210, 74%, 70%);
 }
 body.light-theme .container .search-and-filter .dropdown-menu .options-list.active {
-  padding: 1rem 1.5rem;
   height: 10rem;
 }
 body.light-theme .container .country-list {
@@ -204,6 +205,7 @@ body.light-theme .container .country-list .country-card .country-card-info ul li
 }
 
 body {
+  overflow-x: hidden;
   transition: 0.2s;
   background-color: hsl(207, 26%, 17%);
   color: white;
@@ -332,13 +334,15 @@ body .container .search-and-filter .dropdown-menu .options-list {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  transition: height 1s;
+  justify-content: center;
+  gap: 0.2rem;
+  transition: height 0.2s;
   position: absolute;
   width: 100%;
   z-index: 1;
 }
 body .container .search-and-filter .dropdown-menu .options-list a {
+  padding: 0.2rem 1rem 0rem 1.5rem;
   text-decoration: none;
   color: white;
   transition: 0.2s;
@@ -347,7 +351,6 @@ body .container .search-and-filter .dropdown-menu .options-list a:hover, body .c
   color: hsl(210, 74%, 70%);
 }
 body .container .search-and-filter .dropdown-menu .options-list.active {
-  padding: 1rem 1.5rem;
   height: 10rem;
 }
 body .container .country-list {
