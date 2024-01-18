@@ -430,12 +430,15 @@ body .container .country-list .country-card .country-card-info ul li span {
 .details-page.light-theme nav .go-back:hover {
   background-color: transparent;
 }
-.details-page.light-theme nav .go-back:hover img {
+.details-page.light-theme nav .go-back:hover svg {
   transform: translateX(-1rem);
 }
-.details-page.light-theme nav .go-back img {
+.details-page.light-theme nav .go-back svg {
   transition: 0.2s;
   max-width: 25%;
+}
+.details-page.light-theme nav .go-back svg path {
+  stroke: hsl(0, 0%, 52%);
 }
 .details-page.light-theme main {
   font-size: 16px;
@@ -520,12 +523,15 @@ body .container .country-list .country-card .country-card-info ul li span {
 .details-page nav .go-back:hover {
   background-color: hsl(209, 33%, 32%);
 }
-.details-page nav .go-back:hover img {
+.details-page nav .go-back:hover svg {
   transform: translateX(-1rem);
 }
-.details-page nav .go-back img {
+.details-page nav .go-back svg {
   transition: 0.2s;
   max-width: 25%;
+}
+.details-page nav .go-back svg path {
+  stroke: white;
 }
 .details-page main {
   font-size: 16px;

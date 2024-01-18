@@ -337,12 +337,16 @@ body {
       &:hover {
         background-color: $hovered-element;
 
-        img {
+        svg {
           transform: translateX(-1rem);
         }
       }
 
-      img {
+      svg {
+        path {
+          stroke: $input;
+        }
+
         transition: $duration;
         max-width: 25%;
       }
