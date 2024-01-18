@@ -6,7 +6,7 @@ const options = optionsContainer.querySelectorAll("a");
 async function fetchData() {
   const response = await fetch("./data.json");
   const data = await response.json();
-  console.log(data[0]);
+  console.log(data);
   populate(data);
 }
 
@@ -31,13 +31,11 @@ function populate(countries) {
     // <article class="country-card">
     countryCard.classList.add("country-card");
     countryCard.innerHTML = `
-          <a class="image-container" href="/pages/details.html?country=${
-            country.name
-          }">
+          <a class="image-container" href="/pages/details.html?country=${country.alpha3Code.toLocaleLowerCase()}">
             <img src="${country.flag}" alt="country flag" loading="lazy" />
           </a>
           <div class="country-card-info">
-            <a href="/pages/details.html?country=${country.name}">
+            <a href="/pages/details.html?country=${country.alpha3Code.toLocaleLowerCase()}">
               <h2 class="country-card-title">${country.name}</h2>
             </a>
             <ul>
