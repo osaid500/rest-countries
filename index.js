@@ -26,7 +26,7 @@ function expandOptions() {
 // document.addEventListener("DOMContentLoaded", async () => {});
 
 function populate(countries) {
-  countries.slice(0, 3).map((country) => {
+  countries.map((country, index) => {
     const countryCard = document.createElement("article");
     // <article class="country-card">
     countryCard.classList.add("country-card");
@@ -34,7 +34,7 @@ function populate(countries) {
           <a class="image-container" href="/pages/details.html?country=${
             country.name
           }">
-            <img src="${country.flags.png}" alt="country flag" />
+            <img src="${country.flag}" alt="country flag" loading="lazy" />
           </a>
           <div class="country-card-info">
             <a href="/pages/details.html?country=${country.name}">
@@ -55,8 +55,9 @@ function populate(countries) {
               </li>
             </ul>
           </div>`;
-
-    countryList.appendChild(countryCard);
+    setTimeout(() => {
+      countryList.appendChild(countryCard);
+    }, index * 200);
   });
 }
 
