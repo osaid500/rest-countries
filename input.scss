@@ -22,7 +22,8 @@ $duration: 0.2s;
 //   color: $text;
 // }
 
-@mixin homePageContent($background, $element, $text, $input, $hovered-element) {
+@mixin bodyContent($background, $element, $text, $input, $hovered-element) {
+  transition: $duration;
   background-color: $background;
   color: $text;
   margin: 0;
@@ -163,6 +164,7 @@ $duration: 0.2s;
         }
 
         .options-list {
+          box-shadow: $shadow;
           background-color: $element;
           border-radius: 0.3rem;
           overflow: hidden;
@@ -281,7 +283,7 @@ $duration: 0.2s;
 // $hovered-element: transparent;
 
 body.light-theme {
-  @include homePageContent(
+  @include bodyContent(
     hsl(0, 0%, 98%),
     hsl(0, 0%, 100%),
     hsl(200, 15%, 8%),
@@ -291,7 +293,7 @@ body.light-theme {
 }
 
 body {
-  @include homePageContent(
+  @include bodyContent(
     hsl(207, 26%, 17%),
     hsl(209, 23%, 22%),
     white,
