@@ -405,7 +405,12 @@ body {
               max-height: 1rem;
               padding: 0.6rem 0.5rem;
               transition: $duration;
-
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              display: inline-block;
+              text-align: center;
+              line-height: clamp(1rem, 10vw, 0.5rem);
               &:hover {
                 background-color: $hovered-element;
               }

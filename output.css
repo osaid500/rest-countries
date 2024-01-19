@@ -504,6 +504,12 @@ body .container .country-list .country-card .country-card-info ul li span {
   max-height: 1rem;
   padding: 0.6rem 0.5rem;
   transition: 0.2s;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+  text-align: center;
+  line-height: clamp(1rem, 10vw, 0.5rem);
 }
 .details-page.light-theme main .details .details-container .border .border-countries a:hover {
   background-color: transparent;
@@ -597,6 +603,12 @@ body .container .country-list .country-card .country-card-info ul li span {
   max-height: 1rem;
   padding: 0.6rem 0.5rem;
   transition: 0.2s;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: inline-block;
+  text-align: center;
+  line-height: clamp(1rem, 10vw, 0.5rem);
 }
 .details-page main .details .details-container .border .border-countries a:hover {
   background-color: hsl(209, 33%, 32%);
