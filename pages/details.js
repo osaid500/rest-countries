@@ -8,9 +8,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   const data = await response.json();
 
   const selectedCountry = data.find(
-    (country) => country.alpha3Code.toLowerCase() === countryName
+    (country) => country.alpha3Code === countryName
   );
   let borderCountriesContainerHTML;
+
+  console.log(data);
 
   if (selectedCountry.borders) {
     borderCountries = data.filter((country) =>

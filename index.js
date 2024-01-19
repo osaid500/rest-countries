@@ -1,3 +1,6 @@
+const urlParams = new URLSearchParams(window.location.search);
+const region = urlParams.get("region").toLowerCase();
+
 const countryList = document.querySelector(".country-list");
 const dropdownButton = document.querySelector("#dropdownMenuButton");
 const optionsContainer = document.querySelector("#optionsList");
@@ -7,7 +10,14 @@ async function fetchData() {
   const response = await fetch("./data.json");
   const data = await response.json();
   console.log(data);
-  populate(data);
+  console.log(urlParams);
+
+  const countries = region
+    ? data.filter((country) => country.region.toLowerCase() === region)
+    : data;
+
+  console.log(countries, region);
+  populate(countries);
 }
 
 fetchData();
@@ -31,11 +41,13 @@ function populate(countries) {
     // <article class="country-card">
     countryCard.classList.add("country-card");
     countryCard.innerHTML = `
-          <a class="image-container" href="/pages/details.html?country=${country.alpha3Code.toLocaleLowerCase()}">
+          <a class="image-container" href="/pages/details.html?country=${
+            country.alpha3Code
+          }">
             <img src="${country.flag}" alt="country flag" loading="lazy" />
           </a>
           <div class="country-card-info">
-            <a href="/pages/details.html?country=${country.alpha3Code.toLocaleLowerCase()}">
+            <a href="/pages/details.html?country=${country.alpha3Code}">
               <h2 class="country-card-title">${country.name}</h2>
             </a>
             <ul>
