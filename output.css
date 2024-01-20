@@ -147,8 +147,8 @@ body.light-theme .container .search-and-filter .dropdown-menu .options-list.acti
   height: 10rem;
 }
 body.light-theme .container .country-list {
-  padding: 0 clamp(0.1rem, 6vw, 3rem);
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 5rem;
 }
@@ -356,8 +356,8 @@ body .container .search-and-filter .dropdown-menu .options-list.active {
   height: 10rem;
 }
 body .container .country-list {
-  padding: 0 clamp(0.1rem, 6vw, 3rem);
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 5rem;
 }
