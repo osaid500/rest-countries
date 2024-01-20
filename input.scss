@@ -157,6 +157,7 @@ $duration: 0.2s;
           border-radius: 0.3rem;
           overflow: hidden;
           height: 0;
+          padding: 0;
           margin-top: 0.3rem;
           box-sizing: border-box;
           display: flex;
@@ -171,17 +172,17 @@ $duration: 0.2s;
 
           li {
             list-style: none;
-          }
 
-          a {
-            padding: 0.2rem 1rem 0rem 1.5rem;
-            text-decoration: none;
-            color: $text;
-            transition: $duration;
+            a {
+              padding: 0.2rem 1rem 0rem 1.5rem;
+              text-decoration: none;
+              color: $text;
+              transition: $duration;
 
-            &:hover,
-            &:focus {
-              color: $hovered-text;
+              &:hover,
+              &:focus {
+                color: $hovered-text;
+              }
             }
           }
 

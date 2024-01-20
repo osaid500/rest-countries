@@ -34,17 +34,14 @@
             required
           />
         </form>
-        <div
-          class="dropdown-menu"
-          role="listbox"
-          aria-labelledby="dropdownMenuButton"
-        >
+        <div class="dropdown-menu">
           <button
             class="select"
             type="button"
             id="dropdownMenuButton"
             aria-haspopup="true"
             aria-expanded="false"
+            aria-controls="optionsList"
           >
             <span>Filter by region</span>
             <svg
@@ -59,7 +56,12 @@
               ></path>
             </svg>
           </button>
-          <div class="options-list" id="optionsList" role="list">
+          <ul
+            class="options-list"
+            id="optionsList"
+            role="region"
+            aria-labelledby="dropdownMenuButton"
+          >
             <li>
               <a class="option" href="?region=africa" tabindex="-1">Africa</a>
             </li>
@@ -77,7 +79,7 @@
             <li>
               <a class="option" href="?region=oceania" tabindex="-1">Oceania</a>
             </li>
-          </div>
+          </ul>
         </div>
       </section>
       <section class="country-list"></section>
