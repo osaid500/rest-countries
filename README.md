@@ -83,4 +83,4 @@ These resources not only helped me overcome specific challenges but also enriche
 
 - Frontend Mentor - [@osaid500](https://www.frontendmentor.io/profile/osaid500)
 
-- LinkedIn - [Osaid Zedki](https://www.linkedin.com/in/osaid-zedki-38a539246/)
+- LinkedIn - [Osaid Zedki](https://www.linkedin.com/in/osaid-zedki)
