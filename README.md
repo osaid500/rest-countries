@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](https://i.ibb.co/CzFhj7t/ipad-view.png)
-![](https://i.ibb.co/Ht424y3/mobile-view.png)
+![](https://i.ibb.co/wQWbFP9/ipad-view.png)
+![](https://i.ibb.co/1TFY0QJ/mobile-view.png)
 
 ### Links
 
