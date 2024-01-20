@@ -4,17 +4,15 @@ const countryName = urlParams.get("country");
 const container = document.querySelector(".container");
 
 document.addEventListener("DOMContentLoaded", async () => {
-  const response = await fetch("../data.json");
+  const response = await fetch("https://restcountries.com/v3.1/all");
   const data = await response.json();
 
-  const selectedCountry = data.find(
-    (country) => country.alpha3Code === countryName
-  );
+  const selectedCountry = data.find((country) => country.cca3 === countryName);
   let borderCountriesContainerHTML;
 
   if (selectedCountry.borders) {
     borderCountries = data.filter((country) =>
-      selectedCountry.borders.slice(0, 3).includes(country.alpha3Code)
+      selectedCountry.borders.slice(0, 3).includes(country.cca3)
     );
 
     const borderCountriesContainer = document.createElement("div");
@@ -22,8 +20,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     borderCountries.map((el) => {
       const borderButton = document.createElement("a");
-      borderButton.href = `/pages/details.html?country=${el.alpha3Code}`;
-      borderButton.textContent = el.name;
+      borderButton.href = `/pages/details.html?country=${el.cca3}`;
+      borderButton.textContent = el.name.common;
       borderCountriesContainer.appendChild(borderButton);
       borderCountriesContainerHTML = borderCountriesContainer.outerHTML;
     });
@@ -35,25 +33,21 @@ document.addEventListener("DOMContentLoaded", async () => {
 });
 
 function populate(country, borderCountriesContainerHTML) {
-  const {
-    nativeName,
-    population,
-    region,
-    subregion,
-    capital,
-    topLevelDomain,
-    currencies,
-    languages,
-  } = country;
+  const { population, region, subregion, capital, tld, currencies, languages } =
+    country;
 
-  function stringifyArray(array) {
+  const nativeName = Object.values(country.name.nativeName)[0].official;
+
+  function stringify(array) {
     if (!array) return "None";
-    return array.map((el) => el.name).join(", ");
+    return Object.values(array)
+      .map((el) => el.name)
+      .join(", ");
   }
 
-  container.innerHTML = ` <img src="${country.flag}" alt="country flag" />
+  container.innerHTML = ` <img src="${country.flags.svg}" alt="country flag" />
       <section class="details">
-        <h2>${country.name}</h2>
+        <h2>${country.name.common}</h2>
         <div class="details-container">
           <div>
             <p><strong>Native Name: </strong>${nativeName || "None"}</p>
@@ -63,11 +57,9 @@ function populate(country, borderCountriesContainerHTML) {
             <p><strong>Capital: </strong>${capital || "None"}</p>
           </div>
           <div>
-            <p><strong>Top Level Domain: </strong>${
-              topLevelDomain || "None"
-            }</p>
-            <p><strong>Currencies: </strong>${stringifyArray(currencies)}</p>
-            <p><strong>Languages: </strong>${stringifyArray(languages)}</p>
+            <p><strong>Top Level Domain: </strong>${tld || "None"}</p>
+            <p><strong>Currencies: </strong>${stringify(currencies)}</p>
+            <p><strong>Languages: </strong>${Object.values(languages)}</p>
           </div>
           <div class="border">
             <h3>Border Countries:</h3>

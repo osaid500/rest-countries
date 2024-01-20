@@ -8,11 +8,13 @@ const optionsContainer = document.querySelector("#optionsList");
 const options = optionsContainer.querySelectorAll("a");
 
 async function fetchData() {
-  const response = await fetch("./data.json");
+  const response = await fetch("https://restcountries.com/v3.1/all");
   const data = await response.json();
 
   function findCountry(data) {
-    return data.filter((country) => country.name.toLowerCase().includes(query));
+    return data.filter((country) =>
+      country.name.common.toLowerCase().includes(query)
+    );
   }
 
   const countries = query
@@ -50,13 +52,13 @@ function populate(countries) {
     countryCard.classList.add("country-card");
     countryCard.innerHTML = `
           <a class="image-container" href="/pages/details.html?country=${
-            country.alpha3Code
+            country.cca3
           }">
-            <img src="${country.flag}" alt="country flag" loading="lazy" />
+            <img src="${country.flags.svg}" alt="country flag" loading="lazy" />
           </a>
           <div class="country-card-info">
-            <a href="/pages/details.html?country=${country.alpha3Code}">
-              <h2 class="country-card-title">${country.name}</h2>
+            <a href="/pages/details.html?country=${country.cca3}">
+              <h2 class="country-card-title">${country.name.common}</h2>
             </a>
             <ul>
               <li>
