@@ -1,5 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search);
-const region = urlParams.get("region").toLowerCase();
+const region = urlParams.get("region") && urlParams.get("region").toLowerCase();
 
 const countryList = document.querySelector(".country-list");
 const dropdownButton = document.querySelector("#dropdownMenuButton");
