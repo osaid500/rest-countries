@@ -169,6 +169,10 @@ $duration: 0.2s;
           width: 100%;
           z-index: 1;
 
+          li {
+            list-style: none;
+          }
+
           a {
             padding: 0.2rem 1rem 0rem 1.5rem;
             text-decoration: none;

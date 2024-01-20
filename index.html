@@ -34,7 +34,11 @@
             required
           />
         </form>
-        <div class="dropdown-menu" role="listbox">
+        <div
+          class="dropdown-menu"
+          role="listbox"
+          aria-labelledby="dropdownMenuButton"
+        >
           <button
             class="select"
             type="button"
@@ -56,11 +60,23 @@
             </svg>
           </button>
           <div class="options-list" id="optionsList" role="list">
-            <a class="option" href="?region=africa" tabindex="-1">Africa</a>
-            <a class="option" href="?region=americas" tabindex="-1">Americas</a>
-            <a class="option" href="?region=asia" tabindex="-1">Asia</a>
-            <a class="option" href="?region=europe" tabindex="-1">Europe</a>
-            <a class="option" href="?region=oceania" tabindex="-1">Oceania</a>
+            <li>
+              <a class="option" href="?region=africa" tabindex="-1">Africa</a>
+            </li>
+            <li>
+              <a class="option" href="?region=americas" tabindex="-1"
+                >Americas</a
+              >
+            </li>
+            <li>
+              <a class="option" href="?region=asia" tabindex="-1">Asia</a>
+            </li>
+            <li>
+              <a class="option" href="?region=europe" tabindex="-1">Europe</a>
+            </li>
+            <li>
+              <a class="option" href="?region=oceania" tabindex="-1">Oceania</a>
+            </li>
           </div>
         </div>
       </section>

@@ -140,6 +140,9 @@ body.light-theme .container .search-and-filter .dropdown-menu .options-list {
   width: 100%;
   z-index: 1;
 }
+body.light-theme .container .search-and-filter .dropdown-menu .options-list li {
+  list-style: none;
+}
 body.light-theme .container .search-and-filter .dropdown-menu .options-list a {
   padding: 0.2rem 1rem 0rem 1.5rem;
   text-decoration: none;
@@ -356,6 +359,9 @@ body .container .search-and-filter .dropdown-menu .options-list {
   position: absolute;
   width: 100%;
   z-index: 1;
+}
+body .container .search-and-filter .dropdown-menu .options-list li {
+  list-style: none;
 }
 body .container .search-and-filter .dropdown-menu .options-list a {
   padding: 0.2rem 1rem 0rem 1.5rem;
