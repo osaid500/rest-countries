@@ -11,9 +11,14 @@
     <header></header>
     <main class="container">
       <section class="search-and-filter">
-        <form class="search-section">
-          <button>
-            <svg viewBox="0 0 24 24" id="searchIcon">
+        <form class="search-form">
+          <button aria-label="Search">
+            <svg
+              viewBox="0 0 24 24"
+              id="searchIcon"
+              role="img"
+              aria-label="Search"
+            >
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -59,32 +64,7 @@
           </div>
         </div>
       </section>
-      <section class="country-list">
-        <!-- <article class="country-card">
-          <a class="image-container" href="/pages/details.html">
-            <img src="https://flagcdn.com/w320/ax.png" alt="country flag" />
-          </a>
-          <div class="country-card-info">
-            <a href="/pages/details.html?country=germany">
-              <h2 class="country-card-title">Germany</h2>
-            </a>
-            <ul>
-              <li>
-                <strong>Population:</strong>
-                <span>81,770,920</span>
-              </li>
-              <li>
-                <strong>Region:</strong>
-                <span>Europe</span>
-              </li>
-              <li>
-                <strong>Capital:</strong>
-                <span>Berlin</span>
-              </li>
-            </ul>
-          </div>
-        </article> -->
-      </section>
+      <section class="country-list"></section>
     </main>
 
     <script src="index.js"></script>

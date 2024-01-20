@@ -15,8 +15,6 @@ async function fetchData() {
     return data.filter((country) => country.name.toLowerCase().includes(query));
   }
 
-  console.log(findCountry(data));
-
   const countries = query
     ? findCountry(data)
     : region
@@ -29,8 +27,6 @@ async function fetchData() {
     countryList.appendChild(error);
     return;
   }
-
-  // const queryCountries = console.log(queryCountries, query);
 
   populate(countries);
 }
@@ -48,12 +44,9 @@ function expandOptions() {
   }
 }
 
-// document.addEventListener("DOMContentLoaded", async () => {});
-
 function populate(countries) {
   countries.map((country, index) => {
     const countryCard = document.createElement("article");
-    // <article class="country-card">
     countryCard.classList.add("country-card");
     countryCard.innerHTML = `
           <a class="image-container" href="/pages/details.html?country=${

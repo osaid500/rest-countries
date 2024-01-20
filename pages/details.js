@@ -12,8 +12,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   );
   let borderCountriesContainerHTML;
 
-  console.log(data);
-
   if (selectedCountry.borders) {
     borderCountries = data.filter((country) =>
       selectedCountry.borders.slice(0, 3).includes(country.alpha3Code)

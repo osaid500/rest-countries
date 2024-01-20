@@ -49,19 +49,19 @@ body.light-theme .container .search-and-filter {
   justify-content: space-between;
   gap: 2.5rem;
 }
-body.light-theme .container .search-and-filter .search-section {
+body.light-theme .container .search-and-filter .search-form {
   max-width: 100%;
   height: 100%;
   position: relative;
   box-sizing: border-box;
   display: flex;
 }
-body.light-theme .container .search-and-filter .search-section button {
+body.light-theme .container .search-and-filter .search-form button {
   padding: 0;
   background-color: transparent;
   border: none;
 }
-body.light-theme .container .search-and-filter .search-section button svg {
+body.light-theme .container .search-and-filter .search-form button svg {
   max-width: 1rem;
   position: absolute;
   top: 0;
@@ -71,11 +71,11 @@ body.light-theme .container .search-and-filter .search-section button svg {
   fill: hsl(0, 0%, 52%);
   cursor: pointer;
 }
-body.light-theme .container .search-and-filter .search-section button:focus svg,
-body.light-theme .container .search-and-filter .search-section button svg:hover {
+body.light-theme .container .search-and-filter .search-form button:focus svg,
+body.light-theme .container .search-and-filter .search-form button svg:hover {
   transform: scale(1.4);
 }
-body.light-theme .container .search-and-filter .search-section input {
+body.light-theme .container .search-and-filter .search-form input {
   width: 100%;
   padding: 1rem clamp(2.2rem, 20vw, 4.5rem);
   border-radius: 0.3rem;
@@ -87,12 +87,12 @@ body.light-theme .container .search-and-filter .search-section input {
   text-overflow: ellipsis;
   transition: 0.2s;
 }
-body.light-theme .container .search-and-filter .search-section input:hover, body.light-theme .container .search-and-filter .search-section input:focus {
+body.light-theme .container .search-and-filter .search-form input:hover, body.light-theme .container .search-and-filter .search-form input:focus {
   background-color: transparent;
   padding-right: clamp(2.2rem, 20vw, 7rem);
   padding-left: clamp(2.2rem, 20vw, 6rem);
 }
-body.light-theme .container .search-and-filter .search-section input::placeholder {
+body.light-theme .container .search-and-filter .search-form input::placeholder {
   color: hsl(0, 0%, 52%);
 }
 body.light-theme .container .search-and-filter .dropdown-menu {
@@ -265,19 +265,19 @@ body .container .search-and-filter {
   justify-content: space-between;
   gap: 2.5rem;
 }
-body .container .search-and-filter .search-section {
+body .container .search-and-filter .search-form {
   max-width: 100%;
   height: 100%;
   position: relative;
   box-sizing: border-box;
   display: flex;
 }
-body .container .search-and-filter .search-section button {
+body .container .search-and-filter .search-form button {
   padding: 0;
   background-color: transparent;
   border: none;
 }
-body .container .search-and-filter .search-section button svg {
+body .container .search-and-filter .search-form button svg {
   max-width: 1rem;
   position: absolute;
   top: 0;
@@ -287,11 +287,11 @@ body .container .search-and-filter .search-section button svg {
   fill: white;
   cursor: pointer;
 }
-body .container .search-and-filter .search-section button:focus svg,
-body .container .search-and-filter .search-section button svg:hover {
+body .container .search-and-filter .search-form button:focus svg,
+body .container .search-and-filter .search-form button svg:hover {
   transform: scale(1.4);
 }
-body .container .search-and-filter .search-section input {
+body .container .search-and-filter .search-form input {
   width: 100%;
   padding: 1rem clamp(2.2rem, 20vw, 4.5rem);
   border-radius: 0.3rem;
@@ -303,12 +303,12 @@ body .container .search-and-filter .search-section input {
   text-overflow: ellipsis;
   transition: 0.2s;
 }
-body .container .search-and-filter .search-section input:hover, body .container .search-and-filter .search-section input:focus {
+body .container .search-and-filter .search-form input:hover, body .container .search-and-filter .search-form input:focus {
   background-color: hsl(209, 33%, 32%);
   padding-right: clamp(2.2rem, 20vw, 7rem);
   padding-left: clamp(2.2rem, 20vw, 6rem);
 }
-body .container .search-and-filter .search-section input::placeholder {
+body .container .search-and-filter .search-form input::placeholder {
   color: white;
 }
 body .container .search-and-filter .dropdown-menu {
