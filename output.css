@@ -56,6 +56,11 @@ body.light-theme .container .search-and-filter .search-section {
   box-sizing: border-box;
   display: flex;
 }
+body.light-theme .container .search-and-filter .search-section button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
 body.light-theme .container .search-and-filter .search-section svg {
   max-width: 1rem;
   position: absolute;
@@ -264,6 +269,11 @@ body .container .search-and-filter .search-section {
   position: relative;
   box-sizing: border-box;
   display: flex;
+}
+body .container .search-and-filter .search-section button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
 }
 body .container .search-and-filter .search-section svg {
   max-width: 1rem;

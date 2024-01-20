@@ -1,5 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const region = urlParams.get("region") && urlParams.get("region").toLowerCase();
+const query = urlParams.get("query");
 
 const countryList = document.querySelector(".country-list");
 const dropdownButton = document.querySelector("#dropdownMenuButton");
@@ -9,14 +10,17 @@ const options = optionsContainer.querySelectorAll("a");
 async function fetchData() {
   const response = await fetch("./data.json");
   const data = await response.json();
-  console.log(data);
-  console.log(urlParams);
 
-  const countries = region
+  const countries = query
+    ? data.filter(
+        (country) => country.name.toLowerCase().slice(0, query.length) === query
+      )
+    : region
     ? data.filter((country) => country.region.toLowerCase() === region)
     : data;
 
-  console.log(countries, region);
+  // const queryCountries = console.log(queryCountries, query);
+
   populate(countries);
 }
 
@@ -70,5 +74,3 @@ function populate(countries) {
     }, index * 200);
   });
 }
-
-dropdownButton.addEventListener("click", expandOptions);

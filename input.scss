@@ -76,6 +76,12 @@ $duration: 0.2s;
         box-sizing: border-box;
         display: flex;
 
+        button {
+          padding: 0;
+          background-color: transparent;
+          border: none;
+        }
+
         svg {
           max-width: 1rem;
           position: absolute;
