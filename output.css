@@ -32,7 +32,7 @@ body.light-theme header .theme-selector {
 body.light-theme header .theme-selector img {
   width: 1rem;
 }
-body.light-theme header .theme-selector img:hover {
+body.light-theme header .theme-selector img:hover, body.light-theme header .theme-selector img:focus {
   transform: scale(1.4);
 }
 body.light-theme header .theme-selector p {
@@ -61,7 +61,7 @@ body.light-theme .container .search-and-filter .search-section button {
   background-color: transparent;
   border: none;
 }
-body.light-theme .container .search-and-filter .search-section svg {
+body.light-theme .container .search-and-filter .search-section button svg {
   max-width: 1rem;
   position: absolute;
   top: 0;
@@ -71,7 +71,8 @@ body.light-theme .container .search-and-filter .search-section svg {
   fill: hsl(0, 0%, 52%);
   cursor: pointer;
 }
-body.light-theme .container .search-and-filter .search-section svg:hover {
+body.light-theme .container .search-and-filter .search-section button:focus svg,
+body.light-theme .container .search-and-filter .search-section button svg:hover {
   transform: scale(1.4);
 }
 body.light-theme .container .search-and-filter .search-section input {
@@ -246,7 +247,7 @@ body header .theme-selector {
 body header .theme-selector img {
   width: 1rem;
 }
-body header .theme-selector img:hover {
+body header .theme-selector img:hover, body header .theme-selector img:focus {
   transform: scale(1.4);
 }
 body header .theme-selector p {
@@ -275,7 +276,7 @@ body .container .search-and-filter .search-section button {
   background-color: transparent;
   border: none;
 }
-body .container .search-and-filter .search-section svg {
+body .container .search-and-filter .search-section button svg {
   max-width: 1rem;
   position: absolute;
   top: 0;
@@ -285,7 +286,8 @@ body .container .search-and-filter .search-section svg {
   fill: white;
   cursor: pointer;
 }
-body .container .search-and-filter .search-section svg:hover {
+body .container .search-and-filter .search-section button:focus svg,
+body .container .search-and-filter .search-section button svg:hover {
   transform: scale(1.4);
 }
 body .container .search-and-filter .search-section input {

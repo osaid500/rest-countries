@@ -45,7 +45,8 @@ $duration: 0.2s;
       img {
         width: 1rem;
 
-        &:hover {
+        &:hover,
+        &:focus {
           transform: scale(1.4);
         }
       }
@@ -80,19 +81,20 @@ $duration: 0.2s;
           padding: 0;
           background-color: transparent;
           border: none;
-        }
 
-        svg {
-          max-width: 1rem;
-          position: absolute;
-          top: 0;
-          bottom: 0;
-          margin: auto 0;
-          margin-left: clamp(1rem, 5vw, 2rem);
-          fill: $input;
-          cursor: pointer;
+          svg {
+            max-width: 1rem;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            margin-left: clamp(1rem, 5vw, 2rem);
+            fill: $input;
+            cursor: pointer;
+          }
 
-          &:hover {
+          &:focus svg,
+          svg:hover {
             transform: scale(1.4);
           }
         }
