@@ -1,6 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const region = urlParams.get("region") && urlParams.get("region").toLowerCase();
-const query = urlParams.get("query");
+const query = urlParams.get("query") && urlParams.get("query").toLowerCase();
 
 const countryList = document.querySelector(".country-list");
 const dropdownButton = document.querySelector("#dropdownMenuButton");
@@ -11,13 +11,24 @@ async function fetchData() {
   const response = await fetch("./data.json");
   const data = await response.json();
 
+  function findCountry(data) {
+    return data.filter((country) => country.name.toLowerCase().includes(query));
+  }
+
+  console.log(findCountry(data));
+
   const countries = query
-    ? data.filter(
-        (country) => country.name.toLowerCase().slice(0, query.length) === query
-      )
+    ? findCountry(data)
     : region
     ? data.filter((country) => country.region.toLowerCase() === region)
     : data;
+
+  if (!countries.length) {
+    const error = document.createElement("h1");
+    error.textContent = "No countries to show 🚫";
+    countryList.appendChild(error);
+    return;
+  }
 
   // const queryCountries = console.log(queryCountries, query);
 
@@ -74,3 +85,5 @@ function populate(countries) {
     }, index * 200);
   });
 }
+
+dropdownButton.addEventListener("click", expandOptions);
